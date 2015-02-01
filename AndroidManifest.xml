@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.androparent"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ap"
+        android:label="@string/app_name"
+        android:theme="@style/AndroParentTheme" >
+        <activity
+            android:name="com.example.androparent.MainActivity"
+            android:icon="@drawable/ap"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="LogIn"
+            android:icon="@drawable/ap"
+            android:label="@string/title_activity_log_in"
+            android:parentActivityName="com.example.androparent.MainActivity" />
+        <activity
+            android:name="SignUp"
+            android:icon="@drawable/ap"
+            android:label="@string/title_activity_logged_in"
+            android:parentActivityName="com.example.androparent.MainActivity" />
+        <activity
+            android:name="ShowKidsListActivity"
+            android:icon="@drawable/ap"
+            android:label="@string/title_show_kids" />
+        <activity
+            android:name="ResetPassword"
+            android:icon="@drawable/ap"
+            android:label="@string/title_reset_password" />
+        <activity
+            android:name="AddChild"
+            android:icon="@drawable/ap"
+            android:label="@string/title_add_child" />
+        <activity
+            android:name="EditChild"
+            android:icon="@drawable/ap"
+            android:label="@string/title_activity_edit" >
+        </activity>
+        <activity
+            android:name="ViewChild"
+            android:icon="@drawable/ap"
+            android:label="@string/title_activity_view" >
+        </activity>
+        <activity
+            android:name="ShowActivities"
+            android:icon="@drawable/ap"
+            android:label="@string/title_activity_show_activities" >
+        </activity>
+        <activity
+            android:name="ShowExpenses"
+            android:icon="@drawable/ap"
+            android:label="@string/title_activity_show_expenses" >
+        </activity>
+        <activity
+            android:name="ShowTreatments"
+            android:icon="@drawable/ap"
+            android:label="@string/title_activity_show_treatments" >
+        </activity>
+        <activity
+            android:name="ShowCaregivers"
+            android:icon="@drawable/ap"
+            android:label="@string/title_activity_show_responsible_persons" >
+        </activity>
+        <activity
+            android:name="AddActivity"
+            android:icon="@drawable/ap"
+            android:label="@string/title_add_activity" >
+        </activity>
+        <activity
+            android:name="AddCaregiver"
+            android:icon="@drawable/ap"
+            android:label="@string/title_add_caregiver" >
+        </activity>
+        <activity
+            android:name="ViewCaregiver"
+            android:icon="@drawable/ap"
+            android:label="@string/title_view_caregiver" >
+        </activity>
+        <activity
+            android:name="EditActivity"
+            android:icon="@drawable/ap"
+            android:label="@string/title_edit_activity" >
+        </activity>
+        <activity
+            android:name="ViewActivity"
+            android:icon="@drawable/ap"
+            android:label="@string/title_view_activity" >
+        </activity>
+        <activity
+            android:name="AddTreatment"
+            android:icon="@drawable/ap"
+            android:label="@string/title_add_treatment" >
+        </activity>
+        <activity
+            android:name="ViewTreatment"
+            android:icon="@drawable/ap"
+            android:label="@string/title_view_treatment" >
+        </activity>
+        <activity
+            android:name="EditTreatment"
+            android:icon="@drawable/ap"
+            android:label="@string/title_edit_treatment" >
+        </activity>
+        <activity
+            android:name="AndroidDashboardDesignActivity"
+            android:icon="@drawable/ap"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="ShowMessages"
+            android:icon="@drawable/ap"
+            android:label="@string/title_show_messages" >
+        </activity>
+        <activity
+            android:name="ComposeMessage"
+            android:icon="@drawable/ap"
+            android:label="@string/title_compose_message" >
+        </activity>
+        <activity
+            android:name="ViewMessage"
+            android:icon="@drawable/ap"
+            android:label="@string/title_view_message" >
+        </activity>
+    </application>
+
+</manifest>

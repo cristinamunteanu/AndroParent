@@ -1,0 +1,15 @@
+<resources>
+
+    <color name="light_grey">#cccccc</color>
+    <color name="orange3">#F38630</color>
+    <color name="orange2">#FA6900</color>
+    <color name="orange1">#FFB273</color>
+    <color name="orange4">#BF7130</color>
+    <color name="orange5">#A64B00</color>
+    <color name="blue1">#69D2E7</color>
+    <color name="blue2">#A7DBD8</color>
+    <color name="blue3">#E0E4CC</color>
+    <color name="blue4">#69D2E7</color>
+    <color name="blue5">#006363</color>
+
+</resources>

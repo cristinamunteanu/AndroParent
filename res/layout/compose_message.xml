@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <!-- Compose Message Form -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <!-- To Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                style="@style/label" />
+
+            <EditText
+                android:id="@+id/to_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/orange3" />
+
+            <!-- Subject Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subject"
+                style="@style/label" />
+
+            <EditText
+                android:id="@+id/subject_et"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/orange3" />
+
+            <!-- Body Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/body"
+                style="@style/label" />
+
+            <EditText
+                android:id="@+id/body_et"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_gravity="top"
+                android:layout_marginBottom="15dip"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:fadeScrollbars="false"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:lines="10"
+                android:scrollbars="vertical"
+                android:textColor="@color/orange3" />
+
+                <!-- Send Button -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="1.0dip"
+                    android:paddingLeft="4.0dip"
+                    android:paddingRight="4.0dip"
+                    android:paddingTop="5.0dip" >
+
+                    <Button
+                        android:id="@+id/btnSend"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:text="@string/send"
+                        android:textColor="@color/orange3" />
+
+                    <!--Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:text="@string/cancel" /-->
+                </LinearLayout>
+        </LinearLayout>
+
+        <!-- Add activity Form Ends -->
+    </RelativeLayout>
+
+</ScrollView>

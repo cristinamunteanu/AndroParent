@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/compose" android:title="Compose"></item>
+    <item android:id="@+id/sent" android:title="Sent"></item>
+    <item android:id="@+id/received" android:title="Received"></item>
+    
+
+</menu>

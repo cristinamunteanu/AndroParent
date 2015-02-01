@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <!-- Add Treatment Form -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <!-- Medication Name Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medication_name"
+                style="@style/label" />
+
+            <EditText
+                android:id="@+id/add_treatment_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/orange3" />
+
+            <!-- Responsible Person Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/responsible_person"
+                style="@style/label" />
+
+            <Button
+                android:id="@+id/select_persons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dip"
+                android:text="@string/none"
+                android:textColor="@color/orange3" />
+
+            <!-- From Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                style="@style/label" />
+
+            <Button
+                android:id="@+id/select_start_date_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cropToPadding="true"
+                android:onClick="selectStartDate"
+                android:text="@string/set_start_date"
+                android:textColor="@color/orange3" />
+
+            <!-- Start Time Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_time"
+                style="@style/label" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="selectStartTime" >
+
+                <EditText
+                    android:id="@+id/at_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:inputType="date"
+                    android:textColor="@color/orange3" />
+
+                <Button
+                    android:id="@+id/select_start_time_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/at_start_time_text"
+                    android:layout_toRightOf="@+id/at_start_time_text"
+                    android:cropToPadding="true"
+                    android:onClick="selectStartTime"
+                    android:text="@string/set"
+                    android:textColor="@color/orange3" />
+            </RelativeLayout>
+
+            <!-- To Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                style="@style/label" />
+
+            <Button
+                android:id="@+id/select_end_date_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cropToPadding="true"
+                android:onClick="selectEndDate"
+                android:text="@string/set_end_date"
+                android:textColor="@color/orange3" />
+
+            <!-- End Time Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/end_time"
+                style="@style/label" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="selectEndTime" >
+
+                <EditText
+                    android:id="@+id/at_end_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:ems="15"
+                    android:enabled="false"
+                    android:inputType="date"
+                    android:textColor="@color/orange3" />
+
+                <Button
+                    android:id="@+id/select_end_time_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/at_end_time_text"
+                    android:layout_toRightOf="@+id/at_end_time_text"
+                    android:cropToPadding="true"
+                    android:onClick="selectEndTime"
+                    android:text="@string/set"
+                    android:textColor="@color/orange3" />
+            </RelativeLayout>
+
+            <!-- Other details -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/details"
+                style="@style/label" />
+
+            <EditText
+                android:id="@+id/treatment_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:inputType="textMultiLine"
+                android:singleLine="true"
+                android:textColor="@color/orange3" />
+
+            <!-- Repetition -->
+
+            <CheckBox
+                android:id="@+id/repeat_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="16dip"
+                android:text="@string/repetition"
+                android:textColor="@color/orange3"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/repetition_number_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="1dip"
+                android:layout_marginTop="5dip"
+                android:entries="@array/repetition_number_array" />
+
+            <Spinner
+                android:id="@+id/repetition_string_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="10dip"
+                android:entries="@array/repetition_string_array" />
+
+            <!-- Reminders -->
+
+
+            <!-- Add Button -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="1.0dip"
+                android:paddingLeft="4.0dip"
+                android:paddingRight="4.0dip"
+                android:paddingTop="5.0dip" >
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="@string/add"
+                    android:textColor="@color/orange3" />
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="@string/cancel"
+                    android:textColor="@color/orange3" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Add treatment Form Ends -->
+    </RelativeLayout>
+
+</ScrollView>

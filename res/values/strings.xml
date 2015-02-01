@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroParent</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="login_anonymous">Log in as anonymous</string>
+    <string name="create_account">I want an account</string>
+    <string name="have_account">I have an account</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="title_activity_logged_in">Welcome!</string>
+    <string name="log_in">Log-in</string>
+    <string name="sign_up">Sign-up</string>
+    <string name="title_activity_log_in">Log-in</string>
+    <string name="title_activity_sign_up">Sign-up</string>
+    <string name="title_activity_edit">Edit</string>
+    <string name="title_activity_view">View child</string>
+    <string name="title_activity_show_activities">Activities</string>
+    <string name="title_activity_show_expenses">Expenses</string>
+    <string name="title_activity_show_treatments">Treatments</string>
+    <string name="title_activity_show_responsible_persons">Caregivers</string>
+    <string name="title_view_caregiver">View caregiver</string>
+    <string name="title_add_caregiver">Add caregiver</string>
+    <string name="title_edit_activity">Edit activity</string>
+    <string name="title_view_activity">View activity</string>
+    <string name="title_add_treatment">Add treatment></string>
+    <string name="title_view_treatment">View treatment</string>
+    <string name="title_edit_treatment">Edit treatment</string>
+    <string name="title_show_messages">Show messages</string>
+    <string name="title_compose_message">Compose message</string>
+    <string name="title_view_message">View message</string>
+    <string name="enter_email">Enter email address</string>
+    <string name="reset_password">Reset my password</string>
+    <string name="child_name">Child name</string>
+    <string name="name">Name</string>
+    <string name="child_birthdate">Birthdate</string>
+    <string name="child_nickname">Nickname</string>
+    <string name="child_details">Other details</string>
+    <string name="add_child">Add child</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="back">Back</string>
+    <string name="add">Add</string>
+    <string name="title_show_kids">Kids</string>
+    <string name="title_add_child">Add child</string>
+    <string name="title_view_child">View child</string>
+    <string name="title_reset_password">Reset password</string>
+    <string name="set">Set</string>
+    <string name="title_add_activity">Add activity</string>
+    <string name="empty">There are no registered items.</string>
+    <string name="date">Date</string>
+    <string name="start_time">Start time</string>
+    <string name="end_time">End time</string>
+    <string name="responsible_person">Caregiver</string>
+    <string name="location">Location</string>
+    <string name="details">Details</string>
+    <string name="enter_name">Enter name</string>
+    <string name="send_request">Send request</string>
+    <string name="sender_name">Sender name</string>
+    <string name="receiver_name">Receiver name</string>
+    <string name="accepted">Acceptance status</string>
+    <string name="child">Receiver name</string>
+    <string name="access_rights">Access rights</string>
+    <string name="confirm_delete">Confirm delete?</string>
+    <string name="confirm">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="medication_name">Medication name</string>
+    <string name="none">- None Selected -</string>
+    <string name="set_start_date">Start Date</string>
+    <string name="set_end_date">End Date</string>
+    <string name="set_start_time">At Time</string>
+    <string name="set_end_time">Repeat at</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="repetition">Repeat every</string>
+    <string name="reminders">Reminder</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="new_to_app">New to AndroParent? Register here</string>
+    <string name="grant">Grant write access</string>
+    <string name="register">Register new account</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="child_picture">Picture</string>
+    <string name="child_picture_description">Picture description of the child</string>
+    <string name="have_account_login">Already have account! Login here</string>
+
+    <string-array name="repetition_number_array">
+        <item>none</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="repetition_string_array">
+        <item>none</item>
+        <item>hours</item>
+        <item>days</item>
+        <item>weeks</item>
+        <item>months</item>
+    </string-array>
+    <string-array name="reminders_array">
+        <item>None</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>20 minutes</item>
+        <item>25 minutes</item>
+        <item>30 minutes</item>
+        <item>45 minutes</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>12 hours</item>
+        <item>24 hours</item>
+        <item>2 days</item>
+        <item>1 week</item>
+    </string-array>
+
+    <string name="activities">Activities</string>
+    <string name="caregivers">Caregivers</string>
+    <string name="treatments">Treatments</string>
+    <string name="messages">Messages</string>
+    <string name="subject">Subject</string>
+    <string name="body">Body</string>
+    <string name="sender">Sender</string>
+    <string name="send">Send</string>
+</resources>

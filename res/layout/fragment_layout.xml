@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.androparent.DashboardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#f8f9fe" >
+
+    <!-- Activities Button -->
+
+    <Button
+        android:id="@+id/btn_activities"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_activities"
+        />
+
+    <!-- Caregivers Button -->
+
+    <Button
+        android:id="@+id/btn_caregivers"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_caregivers"
+         />
+
+    <!-- Messages Button -->
+
+    <Button
+        android:id="@+id/btn_messages"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_messages"
+        />
+
+    <!-- Treatments Button -->
+
+    <Button
+        android:id="@+id/btn_treatments"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn_treatments"
+        />
+
+
+</com.example.androparent.DashboardLayout>

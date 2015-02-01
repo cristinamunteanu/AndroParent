@@ -1,0 +1,56 @@
+<resources>
+
+   <style name="button">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">50dip</item>
+    </style>
+
+    <style name="AndroParentTheme" parent="@android:style/Theme.DeviceDefault.Light.DialogWhenLarge">
+        <item name="android:actionBarStyle">@style/AndroParentActionBar</item>
+    </style>
+
+    <style name="AndroParentActionBar" parent="@android:style/Widget.DeviceDefault.Light.ActionBar">
+        <item name="android:background">#69D2E7</item>
+    </style>
+    <style name="DashboardButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff29549f</item>
+        <item name="android:background">@null</item>
+    </style>    
+     
+   <style name="FooterBar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">#69D2E7</item>
+    </style>  
+    
+   <style name="ListViewCaregiver" parent="@android:style/Widget.ListView">
+    <item name="android:cacheColorHint">@color/blue1</item>
+    <item name="android:divider">@color/blue1</item>
+    <item name="android:dividerHeight">1dp</item>
+    <item name="android:listSelector">@drawable/list_item_selector</item>
+</style>
+
+   <style name="ListView" parent="@android:style/Widget.ListView">
+    <item name="android:cacheColorHint">@android:color/transparent</item>
+    <item name="android:divider">@android:color/transparent</item>
+    <item name="android:dividerHeight">0dp</item>
+    <item name="android:listSelector">@drawable/list_item_selector</item>
+</style>
+
+   <style name="label" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/orange3</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_marginTop">20sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,5 @@
+
+
+add picture to child
+enter in dashboard with children
+choose a child and then enter another dashoard with: activities treatments caregivers photos todos

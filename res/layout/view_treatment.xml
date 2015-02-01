@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <!-- Show Treatment Form -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <!-- Medication Name Label -->
+
+            <TextView
+                style="@style/label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medication_name" />
+
+            <EditText
+                android:id="@+id/show_treatment_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:enabled="false"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/orange3" />
+
+            <!-- Responsible Person Label -->
+
+            <TextView
+                style="@style/label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/responsible_person" />
+
+            <EditText
+                android:id="@+id/select_persons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:enabled="false"
+                android:inputType="text"
+                android:padding="5dip"
+                android:text="@string/none"
+                android:textColor="@color/orange3" />
+
+            <!-- From Label -->
+
+            <TextView
+                style="@style/label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/from" />
+
+            <EditText
+                android:id="@+id/show_startdate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:enabled="false"
+                android:inputType="text"
+                android:padding="5dip"
+                android:text="@string/none"
+                android:textColor="@color/orange3" />
+            <!-- To Label -->
+
+            <TextView
+                style="@style/label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/to" />
+
+            <EditText
+                android:id="@+id/show_enddate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:enabled="false"
+                android:inputType="text"
+                android:padding="5dip"
+                android:text="@string/none"
+                android:textColor="@color/orange3" />
+
+            <!-- Other details -->
+
+            <TextView
+                style="@style/label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/details" />
+
+            <EditText
+                android:id="@+id/treatment_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:enabled="false"
+                android:inputType="textMultiLine"
+                android:singleLine="true"
+                android:textColor="@color/orange3" />
+
+            <!-- Repetition -->
+
+            <TextView
+                style="@style/label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/repetition" />
+
+            <EditText
+                android:id="@+id/show_retetition"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:enabled="false"
+                android:inputType="text"
+                android:padding="5dip"
+                android:text="@string/none"
+                android:textColor="@color/orange3" />
+
+            <!-- Reminders -->
+        </LinearLayout>
+
+        <!-- Show treatment Form Ends -->
+    </RelativeLayout>
+
+</ScrollView>
