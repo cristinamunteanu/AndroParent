@@ -56,6 +56,17 @@ public class SignUp extends Activity {
 		});
 	}
 
+	/**
+	 * Registers a new user with the provided username, email, and password.
+	 * If any of the required fields are empty, displays an alert dialog.
+	 * Otherwise, attempts to sign up the user using Parse backend service.
+	 * On successful registration, navigates to the ShowKidsListActivity.
+	 * On failure, displays an error toast message.
+	 * 
+	 * @param usernameP The username for the new user account
+	 * @param emailP The email address for the new user account
+	 * @param passwordP The password for the new user account
+	 */
 	@SuppressLint("NewApi")
 	public void registerUser(String usernameP, String emailP, String passwordP) {
 		if (usernameP.isEmpty() || emailP.isEmpty() || passwordP.isEmpty()) {
