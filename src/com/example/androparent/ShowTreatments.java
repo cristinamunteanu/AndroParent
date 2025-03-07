@@ -45,6 +45,17 @@ public class ShowTreatments extends ListActivity {
 	private static final int DIALOG_DELETE_TREATMENT = 1;
 
 	private class RemoteDataTask extends AsyncTask<Void, Void, Void> {
+		/**
+		 * Performs a background query to retrieve treatments for a specific child.
+		 * 
+		 * This method executes a Parse query to fetch Treatment objects associated with
+		 * a given childId. The query results are stored in the treatments field.
+		 * 
+		 * @param params Varargs parameter of type Void, not used in this method.
+		 * @return null This method always returns null as per the AsyncTask contract.
+		 * @throws ParseException If there's an error during the query execution.
+		 *         Note: The exception is caught but not handled in the method.
+		 */
 		protected Void doInBackground(Void... params) {
 			ParseQuery query = new ParseQuery("Treatment");
 			query.whereEqualTo("childId", childId);
@@ -67,6 +78,15 @@ public class ShowTreatments extends ListActivity {
 			super.onProgressUpdate(values);
 		}
 
+		/**
+		 * Updates the list adapter with treatment names after background processing.
+		 * 
+		 * This method is called when the AsyncTask completes. It populates an ArrayAdapter
+		 * with treatment names from the 'treatments' list and sets it as the list adapter.
+		 * Finally, it dismisses the progress dialog.
+		 * 
+		 * @param reslt The result of the background computation, which is not used in this method.
+		 */
 		@Override
 		protected void onPostExecute(Void reslt) {
 			adapter = new ArrayAdapter<String>(ShowTreatments.this,
@@ -82,6 +102,19 @@ public class ShowTreatments extends ListActivity {
 		}
 	}
 
+	/**
+	 * Initializes the activity, sets up the user interface, and retrieves child data.
+	 * 
+	 * This method is called when the activity is first created. It performs the following tasks:
+	 * 1. Calls the superclass onCreate method
+	 * 2. Retrieves the childId from the intent extras
+	 * 3. Executes a RemoteDataTask asynchronously
+	 * 4. Registers the activity for context menu
+	 * 5. Retrieves child data from Parse database
+	 *
+	 * @param savedInstanceState Bundle containing the activity's previously saved state, or null if there was none
+	 * @throws com.parse.ParseException if there is an error retrieving child data from Parse
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -112,6 +145,17 @@ public class ShowTreatments extends ListActivity {
 		return true;
 	}
 
+	/**
+	 * Handles the selection of options menu items in the activity.
+	 * 
+	 * This method is called when a user selects an item from the options menu.
+	 * It handles two specific cases:
+	 * 1. Adding a treatment: Checks user permissions and starts the AddTreatment activity if allowed.
+	 * 2. Logging out: Logs out the current user and returns to the MainActivity.
+	 * 
+	 * @param item The menu item that was selected.
+	 * @return boolean Returns true if the menu item selection was handled, false otherwise.
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -141,6 +185,17 @@ public class ShowTreatments extends ListActivity {
 		}
 	}
 
+	/**
+	 * Creates and returns a Dialog for the specified dialog ID.
+	 * 
+	 * This method is responsible for creating dialogs used in the application.
+	 * Currently, it handles the creation of a confirmation dialog for deleting a treatment.
+	 * 
+	 * @param id The ID of the dialog to create
+	 * @return A Dialog object corresponding to the specified ID, or the result of
+	 *         the superclass method if the ID is not recognized
+	 * @deprecated This method uses deprecated functionality and is marked with @SuppressWarnings("deprecation")
+	 */
 	@SuppressWarnings("deprecation")
 	@Override
 	protected Dialog onCreateDialog(int id) {
@@ -164,6 +219,16 @@ public class ShowTreatments extends ListActivity {
 		return super.onCreateDialog(id);
 	}
 
+	/**
+	 * Deletes a treatment object asynchronously.
+	 * 
+	 * This method creates a new RemoteDataTask to delete the given treatment
+	 * object in the background. It handles any ParseException that may occur
+	 * during the deletion process.
+	 * 
+	 * @param treatment The ParseObject representing the treatment to be deleted
+	 * @return void This method does not return a value
+	 */
 	public void deleteTreatment(final ParseObject treatment) {
 		new RemoteDataTask() {
 			protected Void doInBackground(Void... params) {
@@ -186,6 +251,16 @@ public class ShowTreatments extends ListActivity {
 		inflater.inflate(R.menu.show_treatments_cm, menu);
 	}
 
+	/**
+	 * Handles the selection of context menu items for a treatment.
+	 * 
+	 * This method processes the user's selection from the context menu, performing
+	 * actions such as adding the treatment to the calendar or deleting the treatment.
+	 * It handles different menu item selections and executes the corresponding logic.
+	 * 
+	 * @param item The selected menu item
+	 * @return true if the menu item selection was handled, false otherwise
+	 */
 	@SuppressWarnings("deprecation")
 	public boolean onContextItemSelected(MenuItem item) {
 		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
@@ -254,6 +329,18 @@ public class ShowTreatments extends ListActivity {
 		}
 	}
 
+	/**
+	 * Handles the click event on a list item in the treatments list.
+	 * 
+	 * This method is called when a user clicks on a treatment in the list view.
+	 * It creates an intent to start the ViewTreatment activity, passing the
+	 * selected treatment's ID as an extra.
+	 * 
+	 * @param l The ListView where the click happened
+	 * @param v The view that was clicked within the ListView
+	 * @param position The position of the view in the list
+	 * @param id The row id of the item that was clicked
+	 */
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);

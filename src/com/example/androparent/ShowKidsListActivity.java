@@ -198,6 +198,15 @@ public class ShowKidsListActivity extends ListActivity {
 		return super.onCreateDialog(id);
 	}
 
+	/**
+	 * Deletes a child ParseObject asynchronously.
+	 * 
+	 * This method executes the deletion of the specified child object
+	 * in the background using a RemoteDataTask. If an exception occurs
+	 * during the deletion process, it is caught and silently ignored.
+	 * 
+	 * @param child The ParseObject to be deleted
+	 */
 	public void deleteChild(final ParseObject child) {
 		new RemoteDataTask() {
 			protected Void doInBackground(Void... params) {
@@ -220,6 +229,18 @@ public class ShowKidsListActivity extends ListActivity {
 		inflater.inflate(R.menu.show_kids_cm, menu);
 	}
 
+	/**
+	 * Handles the selection of context menu items for a child in the list.
+	 * 
+	 * This method is called when a context menu item is selected. It performs
+	 * different actions based on the selected item:
+	 * - For "edit_child", it checks user permissions and launches the EditChild activity.
+	 * - For "delete_child", it checks user permissions and shows a confirmation dialog.
+	 * 
+	 * @param item The menu item that was selected.
+	 * @return boolean Returns true if the event was handled, false otherwise.
+	 * @throws ClassCastException if the menu info is not of type AdapterContextMenuInfo.
+	 */
 	@SuppressWarnings("deprecation")
 	public boolean onContextItemSelected(MenuItem item) {
 		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item
@@ -254,6 +275,17 @@ public class ShowKidsListActivity extends ListActivity {
 		}
 	}
 
+	/**
+	 * Handles the click event on a list item in the ListView.
+	 * 
+	 * This method is called when a user clicks on an item in the ListView. It creates an Intent
+	 * to start the ViewChild activity, passing the selected child's ID and name as extras.
+	 *
+	 * @param l The ListView where the click happened.
+	 * @param v The view that was clicked within the ListView.
+	 * @param position The position of the view in the list.
+	 * @param id The row id of the item that was clicked.
+	 */
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);

@@ -22,6 +22,16 @@ public class ViewCaregiver extends Activity {
 	ParseObject child;
 	ParseUser person;
 
+	/**
+	 * Initializes the activity for editing a responsible person's access to a child's information.
+	 * This method sets up the UI components, retrieves data from intent extras, initializes Parse,
+	 * queries for child and person objects, and sets up listeners for the checkbox and save button.
+	 * 
+	 * @param savedInstanceState Bundle containing the activity's previously saved state, or null if there was none
+	 * @return void
+	 * 
+	 * @throws ParseException if there are issues with querying or saving Parse objects
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

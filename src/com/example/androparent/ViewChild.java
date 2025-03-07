@@ -10,6 +10,19 @@ public class ViewChild extends Activity {
 	
 	String childId, childName;
     
+    /**
+     * Initializes the dashboard activity, sets up the UI, and configures button click listeners.
+     * 
+     * This method is called when the activity is first created. It performs the following tasks:
+     * 1. Sets the content view to the dashboard layout.
+     * 2. Retrieves child information from the intent extras.
+     * 3. Sets the action bar title to the child's name if available.
+     * 4. Initializes buttons for activities, caregivers, messages, and treatments.
+     * 5. Sets up click listeners for each button to launch corresponding activities.
+     *
+     * @param savedInstanceState Bundle containing the activity's previously saved state, if any.
+     *                           It can be null if the activity is being created for the first time.
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

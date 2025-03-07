@@ -22,6 +22,18 @@ public class TextListAdapter extends ArrayAdapter<TextListItem> {
 		this.data = data;
 	}
 
+	/**
+	 * Gets a custom view for an item in the list.
+	 * 
+	 * This method is responsible for creating or recycling a view for a list item
+	 * and populating it with data from the TextListItem at the specified position.
+	 * It uses the ViewHolder pattern for efficient scrolling performance.
+	 * 
+	 * @param position The position of the item within the adapter's data set
+	 * @param convertView The old view to reuse, if possible
+	 * @param parent The parent that this view will eventually be attached to
+	 * @return A View corresponding to the data at the specified position
+	 */
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View row = convertView;
