@@ -31,6 +31,16 @@ public class ViewActivity extends Activity {
 			activityLocationET;
 	SimpleDateFormat sd = new SimpleDateFormat("MM/dd/yyyy");
 
+	/**
+	 * Initializes the activity, sets up the UI components, and populates the form fields with existing activity data.
+	 * This method is called when the activity is first created. It inflates the layout, initializes UI elements,
+	 * retrieves activity data from the Parse database, and sets up a click listener for the back button.
+	 * 
+	 * @param savedInstanceState Bundle containing the activity's previously saved state, or null if there was none
+	 * @return void
+	 * 
+	 * @throws com.parse.ParseException if there is an error retrieving the activity data from Parse
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -90,6 +100,17 @@ public class ViewActivity extends Activity {
 		return true;
 	}
 
+	/**
+	 * Handles the selection of options menu items.
+	 * 
+	 * This method is called when an item in the options menu is selected. It handles
+	 * two specific cases: editing an activity and logging out. For editing, it checks
+	 * if the user has write access before allowing the action. For logout, it logs out
+	 * the current user and navigates to the main activity.
+	 * 
+	 * @param item The menu item that was selected.
+	 * @return boolean Returns true if the menu item selection was handled, false otherwise.
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
